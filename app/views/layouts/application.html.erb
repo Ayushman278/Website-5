@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<% require_relative "WebScraping.rb" %>
+
+<head>
+  <title>Website</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= getPodcastPage("https://itunes.apple.com/search?term=advices+radio") %>
+
+<%= yield %>
+
+</body>
+</html>
